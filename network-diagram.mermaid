@@ -1,6 +1,19 @@
 flowchart LR
-  Node0("Bartlebee") --> Node0Adapter("PCIe Adapter") --> Node0Drive0("NVMe 128GB [boot]") & Node0Drive1("NVMe 4TB [data]")
-  Node1("Mackenzie") --> Node1Adapter("PCIe Adapter") --> Node1Drive0("NVMe 128GB [boot]") & Node1Drive1("NVMe 4TB [data]")
-  Node2("Muffin") --> Node2Adapter("PCIe Adapter") --> Node2Drive0("NVMe 128GB [boot]") & Node2Drive1("NVMe 4TB [data]")
-  Node3("Nana") --> Node3Adapter("PCIe Adapter") --> Node3Drive0("NVMe 128GB [boot]")
-  Node3 --> Node3Drive1("WD Green 4TB [data]")
+  Node0("Bartlebee<br>10.100.6.33/24")
+    --> Node0Adapter("PCIe Adapter")
+    --> Node0Drive0("NVMe 128GB [boot]") & Node0Drive1("NVMe 4TB [data]")
+
+  Node1("Frisky<br>10.100.6.34/24")
+    --> Node1Adapter("PCIe Adapter")
+    --> Node1Drive0("NVMe 128GB [boot]") & Node1Drive1("NVMe 4TB [data]")
+
+  Node2("Muffin<br>10.100.6.35/24")
+    --> Node2Adapter("PCIe Adapter")
+    --> Node2Drive0("NVMe 128GB [boot]") & Node2Drive1("NVMe 4TB [data]")
+
+  Node3("Nana<br>10.100.6.32/24")
+    --> Node3Adapter("PCIe Adapter")
+    --> Node3Drive0("NVMe 128GB [boot]")
+  Node3
+    --> Node3SATA("SATA")
+    --> Node3Drive1("WD Green 4TB [data]")
