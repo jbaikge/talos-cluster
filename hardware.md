@@ -7,7 +7,7 @@ Each node is named after a character from the Bluey TV series
 ### Kubernetes
 
 - Bartlebee
-- Mackenzie
+- Frisky
 - Muffin
 
 ### Backup
