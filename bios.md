@@ -4,9 +4,10 @@ BIOS Version 2.17.1245 (2017)
 
 ## Main
 
-- A1SRi-2758F
-- Version: 2.0
-- Build Date: 7/24/2017
+| Node      | Motherboard | Version | Build Date  |
+| --------- | ----------- | ------- | ----------- |
+| nana      | A1SRi-2758F | 2.1     | 2018-01-18  |
+| bartlebee | A1SRi-2758F | 2.0     | 2017-07-24  |
 
 ## Advanced
 
@@ -18,7 +19,7 @@ BIOS Version 2.17.1245 (2017)
 - Wait For "F1" If Error: Enabled
 - Interrupt 19 Capture: Immediate
 - Watch Dog Function: Disabled
-- Power Button Function: 4 Seconds Override
+- Power Button Function: Instant Off
 - Restore on AC Power Loss: Last State
 - WOL Support: Enabled
 - HDD Frozen: Enabled
@@ -91,6 +92,8 @@ Nothing remarkable here
 
 ## IPMI
 
+Version 2.23
+
 ### BMC Network Configuration
 
 - Configuration Address Source: Unspecified
@@ -112,6 +115,7 @@ Nothing remarkable here
 
 - Boot Option #1:
 - Boot Option #2:
+- Boot Option #3: UEFI: Built-in EFI Shell
 
 ## Security
 
