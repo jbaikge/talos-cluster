@@ -77,9 +77,11 @@ Keep defaults
 
 ## Boot
 
-- Boot Option #1: USB
-- Boot Option #2:
-- Boot Option #3: UEFI: Built-in EFI Shell
+- Boot Option #1: Patriot M.2 P320 128GB
+- Boot Option #2: UEFI: Built-in EFI Shell
+- Boot Option #3: IBA GE Slot 00A0 v1540
+
+_Note:_ In order to get the 128GB drive as an option, enter "Hard Drive BBS Priorities" and use +/- to move it to the top
 
 ## Security
 
