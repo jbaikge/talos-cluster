@@ -3,6 +3,9 @@
 set -e
 
 if [ -z "$2" ]; then
+    echo "This tool assumes Ventoy is already set up on the USB drives"
+    echo "referenced in the arguments"
+    echo
     echo "Usage: $0 path/to/image.iso /dev/sdX1 [/dev/sdX1 ...]"
     exit 1
 fi
