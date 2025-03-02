@@ -19,6 +19,7 @@ MOUNT_DIR=/tmp/ventoy-mnt
 cat <<EOF > $VENTOY_CONFIG
 {
   "control": [
+    { "VTOY_MENU_TIMEOUT": "10" },
     { "VTOY_DEFAULT_IMAGE": "/$IMAGE_FILE" }
   ]
 }
