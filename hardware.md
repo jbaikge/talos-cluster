@@ -14,7 +14,7 @@ Each node is named after a character from the Bluey TV series
 
 Nana is responsible for taking in backups from the cluster and packaging them for relay up to a cloud provider like Backblaze for off-site storage.
 
-Additionally, Nana will run the Z-wave JS UI server as only one server can have the USB controller plugged into it.
+Additionally, Nana will run the Z-wave JS UI and CUPS printing servers as only one server can have USB cables plugged into it.
 
 ## Specifications
 
