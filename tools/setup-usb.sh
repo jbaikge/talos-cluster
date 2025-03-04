@@ -20,7 +20,8 @@ cat <<EOF > $VENTOY_CONFIG
 {
   "control": [
     { "VTOY_MENU_TIMEOUT": "10" },
-    { "VTOY_DEFAULT_IMAGE": "/$IMAGE_FILE" }
+    { "VTOY_DEFAULT_IMAGE": "/$IMAGE_FILE" },
+    { "VTOY_SECONDARY_TIMEOUT": "10" }
   ]
 }
 EOF
