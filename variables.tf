@@ -7,7 +7,7 @@ variable "cluster_name" {
 variable "cluster_endpoint" {
   description = "The endpoint for the Talos cluster"
   type        = string
-  default     = "https://bartlebee.bluey.baconvacation.com:6443"
+  default     = "https://bluey.baconvacation.com:6443"
 }
 
 variable "nodes" {
@@ -25,21 +25,21 @@ variable "nodes" {
   default = {
     controlplanes = {
       "bartlebee.bluey.baconvacation.com" = {
-        install_disk = "/dev/sda"
+        install_disk = "/dev/nvme1n1"
         hostname     = "bartlebee"
       },
     }
     workers = {
       "bartlebee.bluey.baconvacation.com" = {
-        install_disk = "/dev/nvme0n1"
+        install_disk = "/dev/nvme1n1"
         hostname     = "bartlebee"
       },
       "frisky.bluey.baconvacation.com" = {
-        install_disk = "/dev/nvme0n1"
+        install_disk = "/dev/nvme1n1"
         hostname     = "frisky"
       },
       "muffin.bluey.baconvacation.com" = {
-        install_disk = "/dev/nvme0n1"
+        install_disk = "/dev/nvme1n1"
         hostname     = "muffin"
       },
     }
