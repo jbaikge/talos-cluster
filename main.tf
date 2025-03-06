@@ -30,7 +30,7 @@ resource "talos_machine_configuration_apply" "controlplane" {
       hostname     = each.key
       install_disk = each.value.install_disk
     }),
-    templatefile("${path.module}/templates/pass-through-cache.yaml", {}),
+    templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
     templatefile("${path.module}/templates/cp-scheduling.yaml", {}),
   ]
 }
@@ -45,7 +45,7 @@ resource "talos_machine_configuration_apply" "worker" {
       hostname     = each.key
       install_disk = each.value.install_disk
     }),
-    templatefile("${path.module}/templates/pass-through-cache.yaml", {}),
+    templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
   ]
 }
 
