@@ -1,0 +1,15 @@
+machine:
+  registries:
+    mirrors:
+      docker.io:
+        endpoints:
+          - http://nana.bluey.baconvacation.com:5000
+      gcr.io:
+        endpoints:
+          - http://nana.bluey.baconvacation.com:5003
+      ghcr.io:
+        endpoints:
+          - http://nana.bluey.baconvacation.com:5004
+      registry.k8s.io:
+        endpoints:
+          - http://nana.bluey.baconvacation.com:5001
