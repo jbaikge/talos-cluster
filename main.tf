@@ -24,10 +24,10 @@ resource "talos_machine_configuration_apply" "controlplane" {
   for_each                    = var.nodes.controlplanes
   client_configuration        = talos_machine_secrets.this.client_configuration
   machine_configuration_input = data.talos_machine_configuration.controlplane.machine_configuration
-  node                        = format("%s.%s", each.key, var.cluster_domain)
+  node                        = each.key
   config_patches = [
     templatefile("${path.module}/templates/install-disk-hostname.yaml", {
-      hostname     = each.key
+      hostname     = each.value.hostname
       install_disk = each.value.install_disk
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
@@ -40,10 +40,10 @@ resource "talos_machine_configuration_apply" "worker" {
   for_each                    = var.nodes.workers
   client_configuration        = talos_machine_secrets.this.client_configuration
   machine_configuration_input = data.talos_machine_configuration.worker.machine_configuration
-  node                        = format("%s.%s", each.key, var.cluster_domain)
+  node                        = each.key
   config_patches = [
     templatefile("${path.module}/templates/install-disk-hostname.yaml", {
-      hostname     = each.key
+      hostname     = each.value.hostname
       install_disk = each.value.install_disk
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
