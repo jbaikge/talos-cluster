@@ -33,9 +33,6 @@ variable "nodes" {
       },
     }
     workers = {
-      "bartlebee" = {
-        install_disk = "/dev/nvme1n1"
-      },
       "frisky" = {
         install_disk = "/dev/nvme1n1"
       },
