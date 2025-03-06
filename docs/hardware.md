@@ -10,11 +10,14 @@ Each node is named after a character from the Bluey TV series
 - Frisky
 - Muffin
 
-### Backup
+### Utility
 
-Nana is responsible for taking in backups from the cluster and packaging them for relay up to a cloud provider like Backblaze for off-site storage.
+Nana helps the rest of the cluster with a few features:
 
-Additionally, Nana will run the Z-wave JS UI and CUPS printing servers as only one server can have USB cables plugged into it.
+1. Registry Cache: Running the `registry` container to cache requests to external providers
+2. Backups: Taking backups of the cluster and relaying them up to off-site storage, like Backblaze
+3. Z-Wave: Running the Z-Wave JS UI server with the USB controller
+4. CUPS: Running a CUPS print server with the printer plugged in via USB
 
 ## Specifications
 
