@@ -47,6 +47,7 @@ resource "talos_machine_configuration_apply" "worker" {
       install_disk = each.value.install_disk
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
+    templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
   ]
 }
 
