@@ -31,6 +31,7 @@ resource "talos_machine_configuration_apply" "controlplane" {
       install_disk = each.value.install_disk
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
+    templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
     templatefile("${path.module}/templates/cp-scheduling.yaml", {}),
   ]
 }
@@ -46,6 +47,7 @@ resource "talos_machine_configuration_apply" "worker" {
       install_disk = each.value.install_disk
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
+    templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
   ]
 }
 
