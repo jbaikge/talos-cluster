@@ -6,10 +6,10 @@ machine:
           - http://10.100.6.32:5000
       gcr.io:
         endpoints:
-          - http://10.100.6.32:5003
+          - http://10.100.6.32:5002
       ghcr.io:
         endpoints:
-          - http://10.100.6.32:5004
+          - http://10.100.6.32:5003
       registry.k8s.io:
         endpoints:
           - http://10.100.6.32:5001
