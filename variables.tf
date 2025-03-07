@@ -7,7 +7,7 @@ variable "cluster_name" {
 variable "cluster_endpoint" {
   description = "The endpoint for the Talos cluster"
   type        = string
-  default     = "https://bluey.baconvacation.com:6443"
+  default     = "https://10.100.6.36:6443"
 }
 
 variable "nodes" {
