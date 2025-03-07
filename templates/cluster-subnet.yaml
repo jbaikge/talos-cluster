@@ -1,4 +1,6 @@
 cluster:
   network:
+    podSubnets:
+      - 192.168.0.0/16
     serviceSubnets:
-      - 10.112.0.0/12
+      - 172.16.0.0/12
