@@ -1,0 +1,13 @@
+machine:
+  network:
+    hostname: ${hostname}
+    nameservers:
+      - 10.100.6.1
+    interfaces:
+      - interface: enp0s20f0
+        addresses:
+          - ${ip}/24
+        mtu: 8765
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 10.100.6.1

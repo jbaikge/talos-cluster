@@ -26,9 +26,12 @@ resource "talos_machine_configuration_apply" "controlplane" {
   machine_configuration_input = data.talos_machine_configuration.controlplane.machine_configuration
   node                        = each.key
   config_patches = [
-    templatefile("${path.module}/templates/install-disk-hostname.yaml", {
-      hostname     = each.value.hostname
+    templatefile("${path.module}/templates/disk.yaml", {
       install_disk = each.value.install_disk
+    }),
+    templatefile("${path.module}/templates/network.yaml", {
+      hostname = each.value.hostname
+      ip       = each.key
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
     templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
@@ -42,9 +45,12 @@ resource "talos_machine_configuration_apply" "worker" {
   machine_configuration_input = data.talos_machine_configuration.worker.machine_configuration
   node                        = each.key
   config_patches = [
-    templatefile("${path.module}/templates/install-disk-hostname.yaml", {
-      hostname     = each.value.hostname
+    templatefile("${path.module}/templates/disk.yaml", {
       install_disk = each.value.install_disk
+    }),
+    templatefile("${path.module}/templates/network.yaml", {
+      hostname = each.value.hostname
+      ip       = each.key
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
     templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
