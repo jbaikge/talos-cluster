@@ -19,7 +19,7 @@ Below are the initial BIOS versions of each node:
 
 ### Boot Feature
 
-Keep defaults
+CSM Support: Disable (Do second, reboot)
 
 ### CPU Configuration
 
@@ -44,6 +44,7 @@ Keep defaults
 ### PCIe/PCI/PnP Configuration
 
 - PCIe Slot 1 Bifurcation: 4X4X
+- Launch Video OpROM Policy: UEFI (Do first, reboot)
 
 ### ACPI Settings
 
@@ -77,9 +78,9 @@ Keep defaults
 
 ## Boot
 
-- Boot Option #1: Patriot M.2 P320 128GB
+- Boot Option #1: UEFI: Patriot M.2 P320 128GB
+- Boot Option #2: UEFI: USB
 - Boot Option #2: UEFI: Built-in EFI Shell
-- Boot Option #3: IBA GE Slot 00A0 v1540
 
 _Note:_ In order to get the 128GB drive as an option, enter "Hard Drive BBS Priorities" and use +/- to move it to the top
 
@@ -87,4 +88,4 @@ _Note:_ In order to get the 128GB drive as an option, enter "Hard Drive BBS Prio
 
 ### Secure Boot Menu
 
-Keep defaults
+1.
