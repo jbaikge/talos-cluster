@@ -88,4 +88,6 @@ _Note:_ In order to get the 128GB drive as an option, enter "Hard Drive BBS Prio
 
 ### Secure Boot Menu
 
-1.
+1. Enter Key Managment
+2. Set the PK to the talos-secure-boot.pem file
+3. Keep Secure Boot disabled until Talos is installed
