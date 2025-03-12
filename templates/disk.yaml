@@ -7,9 +7,9 @@ machine:
         - mountpoint: /var/mnt/data
   kubelet:
     extraMounts:
-      - destination: /var/mnt/storage
+      - destination: /var/mnt/data
         type: bind
-        source: /var/mnt/storage
+        source: /var/mnt/data
         options:
           - bind
           - rshared
