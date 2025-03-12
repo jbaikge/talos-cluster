@@ -28,6 +28,7 @@ resource "talos_machine_configuration_apply" "controlplane" {
   config_patches = [
     templatefile("${path.module}/templates/disk.yaml", {
       install_disk = each.value.install_disk
+      data_disk    = each.value.data_disk
     }),
     templatefile("${path.module}/templates/network.yaml", {
       hostname = each.value.hostname
@@ -35,7 +36,9 @@ resource "talos_machine_configuration_apply" "controlplane" {
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
     templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
+    templatefile("${path.module}/templates/mayastor.yaml", {}),
     templatefile("${path.module}/templates/cp-scheduling.yaml", {}),
+    templatefile("${path.module}/templates/cp-mayastor.yaml", {}),
   ]
 }
 
@@ -47,6 +50,7 @@ resource "talos_machine_configuration_apply" "worker" {
   config_patches = [
     templatefile("${path.module}/templates/disk.yaml", {
       install_disk = each.value.install_disk
+      data_disk    = each.value.data_disk
     }),
     templatefile("${path.module}/templates/network.yaml", {
       hostname = each.value.hostname
@@ -54,6 +58,7 @@ resource "talos_machine_configuration_apply" "worker" {
     }),
     templatefile("${path.module}/templates/pull-through-cache.yaml", {}),
     templatefile("${path.module}/templates/cluster-subnet.yaml", {}),
+    templatefile("${path.module}/templates/mayastor.yaml", {}),
   ]
 }
 

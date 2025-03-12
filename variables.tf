@@ -15,10 +15,12 @@ variable "nodes" {
   type = object({
     controlplanes = map(object({
       install_disk = string
+      data_disk    = string
       hostname     = string
     }))
     workers = map(object({
       install_disk = string
+      data_disk    = string
       hostname     = string
     }))
   })
@@ -26,16 +28,19 @@ variable "nodes" {
     controlplanes = {
       "10.100.6.36" = {
         install_disk = "/dev/nvme1n1"
+        data_disk    = "/dev/nvme0n1"
         hostname     = "bartlebee"
       },
     }
     workers = {
       "10.100.6.40" = {
         install_disk = "/dev/nvme1n1"
+        data_disk    = "/dev/nvme0n1"
         hostname     = "frisky"
       },
       "10.100.6.44" = {
         install_disk = "/dev/nvme1n1"
+        data_disk    = "/dev/nvme0n1"
         hostname     = "muffin"
       },
     }

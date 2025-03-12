@@ -1,3 +1,16 @@
 machine:
   install:
     disk: ${install_disk}
+  disks:
+    - device: ${data_disk}
+      partitions:
+        - mountpoint: /var/mnt/data
+  kubelet:
+    extraMounts:
+      - destination: /var/mnt/storage
+        type: bind
+        source: /var/mnt/storage
+        options:
+          - bind
+          - rshared
+          - rw
