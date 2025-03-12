@@ -1,0 +1,12 @@
+mayastor:
+  csi:
+    node:
+      kubeletDir: /var/mnt/data
+      initContainers:
+        enabled: false
+engines:
+  local:
+    lvm:
+      enabled: false
+    zfs:
+      enabled: false
